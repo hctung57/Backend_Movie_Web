@@ -12,7 +12,7 @@ import com.test.nmt.repository.MovieRepository;
 @Service
 public class MovieServiceImp implements MovieService {
     @Autowired
-    MovieRepository movieRepository;
+    private MovieRepository movieRepository;
 
     @Override
     public MovieDTO findById(Long id) {

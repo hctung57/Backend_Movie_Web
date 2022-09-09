@@ -1,5 +1,7 @@
 package com.test.nmt.model.showTime;
 
+import java.sql.Date;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -24,6 +26,16 @@ public class ShowTimeEntity {
     private Long movieID;
     private Long roomID;
     private Long numTicketSold;
-    private String showDate;
-    private String timeZoneID;
+    private Date showDate;
+    private Long timeZoneID;
+
+    public ShowTimeEntity loadFromDTO(ShowTimeDTO dto) {
+        this.showTimeID = dto.getShowTimeID();
+        this.movieID = dto.getMovieID();
+        this.roomID = dto.getRoomID();
+        this.numTicketSold = dto.getNumTicketSold();
+        this.showDate = dto.getShowDate();
+        this.timeZoneID = dto.getTimeZoneID();
+        return this;
+    }
 }

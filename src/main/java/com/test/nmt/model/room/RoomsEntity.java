@@ -20,8 +20,16 @@ import lombok.Setter;
 public class RoomsEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer roomID;
+    private Long roomID;
     private String roomName;
     private String location;
     private Integer numSit;
+
+    public RoomsEntity loadFromDTO(RoomDTO dto) {
+        this.roomID = dto.getRoomID();
+        this.roomName = dto.getRoomName();
+        this.location = dto.getLocation();
+        this.numSit = dto.getNumberSit();
+        return this;
+    }
 }

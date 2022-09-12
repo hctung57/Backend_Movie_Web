@@ -20,4 +20,9 @@ public class OderTicketController {
         return oderTicketRequestService.getTicketDetailByTicketID(id);
     }
 
+    @GetMapping("/user")
+    public TicketDetailDTO getTicketByUserID(@RequestParam(name = "id") Long id) {
+        return oderTicketRequestService.getTicketDetailByUserID(id);
+    }
+
 }

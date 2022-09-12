@@ -23,4 +23,11 @@ public class TicketsEntity {
     private Long ticketID;
     private Long userID;
     private Long showTimeID;
+
+    public TicketsEntity loadFromDTO(TicketDTO dto) {
+        this.ticketID = dto.getTicketID();
+        this.userID = dto.getUserID();
+        this.showTimeID = dto.getShowTimeID();
+        return this;
+    }
 }

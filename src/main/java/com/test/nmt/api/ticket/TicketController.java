@@ -4,11 +4,14 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.test.nmt.model.ticket.TicketDTO;
+import com.test.nmt.service.showTime.ShowTimeService;
 import com.test.nmt.service.ticket.TicketService;
 
 @RestController
@@ -16,6 +19,8 @@ import com.test.nmt.service.ticket.TicketService;
 public class TicketController {
     @Autowired
     private TicketService ticketService;
+    @Autowired
+    private ShowTimeService showTimeService;
 
     @GetMapping
     public TicketDTO getTicketByTicketID(@RequestParam(name = "id") Long id) {
@@ -25,5 +30,11 @@ public class TicketController {
     @GetMapping("/user")
     public List<TicketDTO> getTicketByUserID(@RequestParam(name = "id") Long id) {
         return ticketService.getByUserID(id);
+    }
+
+    @PostMapping
+    public void createTicket(@RequestBody TicketDTO ticketDTO) {
+        ticketService.createTicket(ticketDTO);
+        showTimeService.increaseTicketSold(ticketDTO.getShowTimeID());
     }
 }

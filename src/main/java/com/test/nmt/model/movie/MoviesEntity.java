@@ -25,10 +25,11 @@ public class MoviesEntity {
     private String description;
     private String banner_url;
 
-    public void loadFromDTO(MovieDTO dto) {
+    public MoviesEntity loadFromDTO(MovieDTO dto) {
         this.movieID = dto.getMovieID();
         this.movieName = dto.getMovieName();
         this.description = dto.getDescription();
         this.banner_url = dto.getBanner_url();
+        return this;
     }
 }

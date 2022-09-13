@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.test.nmt.model.ticket.TicketDTO;
+import com.test.nmt.model.ticket.TicketsEntity;
 import com.test.nmt.repository.TicketRepository;
 
 @Service
@@ -24,5 +25,10 @@ public class TicketServiceImp implements TicketService {
         return ticketRepository.findAll().stream().filter(value -> value.getUserID().equals(id))
                 .map(value -> new TicketDTO().loadFromEntity(value))
                 .collect(Collectors.toList());
+    }
+
+    @Override
+    public void createTicket(TicketDTO ticketDTO) {
+        ticketRepository.save(new TicketsEntity().loadFromDTO(ticketDTO));
     }
 }

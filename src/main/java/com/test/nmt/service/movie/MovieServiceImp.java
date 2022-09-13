@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.test.nmt.model.movie.MovieDTO;
+import com.test.nmt.model.movie.MoviesEntity;
 import com.test.nmt.repository.MovieRepository;
 
 @Service
@@ -25,5 +26,10 @@ public class MovieServiceImp implements MovieService {
     public List<MovieDTO> findAll() {
         return movieRepository.findAll().stream().skip(0).map(movie -> new MovieDTO().loadFromEntity(movie))
                 .collect(Collectors.toList());
+    }
+
+    @Override
+    public void createMovie(MovieDTO movieDTO) {
+        movieRepository.save(new MoviesEntity().loadFromDTO(movieDTO));
     }
 }

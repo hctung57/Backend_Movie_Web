@@ -11,4 +11,8 @@ public interface ShowTimeService {
     public ShowTimeDTO getByID(Long id);
 
     public List<ShowTimeDTO> getAll();
+
+    public void increaseTicketSold(Long id);
+
+    public void createShowTime(ShowTimeDTO showTimeDTO);
 }

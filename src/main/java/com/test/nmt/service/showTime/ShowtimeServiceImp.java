@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.test.nmt.model.showTime.ShowTimeDTO;
+import com.test.nmt.model.showTime.ShowTimeEntity;
 import com.test.nmt.repository.ShowTimeRepository;
 
 @Service
@@ -23,5 +24,17 @@ public class ShowtimeServiceImp implements ShowTimeService {
     public List<ShowTimeDTO> getAll() {
         return showTimeRepository.findAll().stream().map(show -> new ShowTimeDTO().loadFromEntity(show))
                 .collect(Collectors.toList());
+    }
+
+    @Override
+    public void increaseTicketSold(Long id) {
+        ShowTimeEntity showTimeEntity = showTimeRepository.findById(id).orElse(null);
+        showTimeEntity.setNumTicketSold(showTimeEntity.getNumTicketSold() + 1);
+        showTimeRepository.save(showTimeEntity);
+    }
+
+    @Override
+    public void createShowTime(ShowTimeDTO showTimeDTO) {
+        showTimeRepository.save(new ShowTimeEntity().loadFromDTO(showTimeDTO));
     }
 }

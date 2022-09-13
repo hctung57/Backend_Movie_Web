@@ -11,4 +11,6 @@ public interface TicketService {
     public TicketDTO getByTicketID(Long id);
 
     public List<TicketDTO> getByUserID(Long id);
+
+    public void createTicket(TicketDTO ticketDTO);
 }

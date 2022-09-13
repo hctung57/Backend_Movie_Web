@@ -11,4 +11,6 @@ public interface MovieService {
     public MovieDTO findById(Long id);
 
     public List<MovieDTO> findAll();
+
+    public void createMovie(MovieDTO movieDTO);
 }

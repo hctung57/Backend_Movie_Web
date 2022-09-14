@@ -1,6 +1,7 @@
 package com.test.nmt.model.showTime;
 
 import java.sql.Date;
+import java.sql.Time;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -17,7 +18,7 @@ public class ShowTimeDTO {
     private Long roomID;
     private Long numTicketSold;
     private Date showDate;
-    private Long timeZoneID;
+    private Time startTime;
 
     public ShowTimeDTO loadFromEntity(ShowTimeEntity entity) {
         this.showTimeID = entity.getShowTimeID();
@@ -25,7 +26,6 @@ public class ShowTimeDTO {
         this.roomID = entity.getRoomID();
         this.numTicketSold = entity.getNumTicketSold();
         this.showDate = entity.getShowDate();
-        this.timeZoneID = entity.getTimeZoneID();
         return this;
     }
 }

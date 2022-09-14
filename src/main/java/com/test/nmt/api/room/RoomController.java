@@ -11,7 +11,7 @@ import com.test.nmt.model.room.RoomDTO;
 import com.test.nmt.service.room.RoomService;
 
 @RestController
-@RequestMapping("/rooms")
+@RequestMapping("/api/rooms")
 public class RoomController {
     @Autowired
     RoomService roomService;

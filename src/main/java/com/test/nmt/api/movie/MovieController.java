@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
 @RestController
-@RequestMapping("/movies")
+@RequestMapping("/api/movies")
 public class MovieController {
     @Autowired
     MovieService movieService;
@@ -32,7 +32,7 @@ public class MovieController {
 
     @PostMapping
     public void createMovie(@RequestBody MovieDTO movieDTO) {
-
+        movieService.createMovie(movieDTO);
     }
 
 }

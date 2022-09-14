@@ -19,7 +19,6 @@ public class ShowTimeDetailsDTO {
     private Integer numberSit;
     private Long numTicketSold;
     private Date showDate;
-    private Long timeZoneID;
     private Time startTime;
     private Time endTime;
 }

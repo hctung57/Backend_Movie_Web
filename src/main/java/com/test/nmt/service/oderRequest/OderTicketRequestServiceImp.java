@@ -8,9 +8,9 @@ import org.springframework.stereotype.Service;
 
 import com.test.nmt.model.ticket.TicketDTO;
 import com.test.nmt.model.ticket.TicketDetailDTO;
-import com.test.nmt.service.UserService;
 import com.test.nmt.service.scheduleRequest.ScheduleRequestService;
 import com.test.nmt.service.ticket.TicketService;
+import com.test.nmt.service.user.UserService;
 
 @Service
 public class OderTicketRequestServiceImp implements OderTicketRequestService {
@@ -26,7 +26,7 @@ public class OderTicketRequestServiceImp implements OderTicketRequestService {
         TicketDTO ticketDTO = ticketService.getByTicketID(id);
         TicketDetailDTO dto = new TicketDetailDTO();
         dto.setShowTimeDTO(Arrays.asList(scheduleRequestService.getDataByShowTimeID(ticketDTO.getShowTimeID())));
-        dto.setUserDTO(userService.findById(ticketDTO.getUserID()));
+        dto.setUserDTO(userService.getByID(ticketDTO.getUserID()));
         dto.setTicketID(id);
         return dto;
     }
@@ -34,7 +34,7 @@ public class OderTicketRequestServiceImp implements OderTicketRequestService {
     @Override
     public TicketDetailDTO getTicketDetailByUserID(Long id) {
         TicketDetailDTO dto = new TicketDetailDTO();
-        dto.setUserDTO(userService.findById(id));
+        dto.setUserDTO(userService.getByID(id));
         dto.setShowTimeDTO(
                 ticketService.getByUserID(id).stream()
                         .map(value -> scheduleRequestService.getDataByShowTimeID(value.getShowTimeID()))

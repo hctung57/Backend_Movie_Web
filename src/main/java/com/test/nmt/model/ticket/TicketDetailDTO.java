@@ -2,8 +2,8 @@ package com.test.nmt.model.ticket;
 
 import java.util.List;
 
-import com.test.nmt.model.UserDTO;
 import com.test.nmt.model.scheduleRequest.MovieScheduleRequestDTO;
+import com.test.nmt.model.user.UserDTO;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

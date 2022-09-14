@@ -10,11 +10,9 @@ import com.test.nmt.model.room.RoomDTO;
 import com.test.nmt.model.scheduleRequest.MovieScheduleRequestDTO;
 import com.test.nmt.model.showTime.ShowTimeDTO;
 import com.test.nmt.model.showTime.ShowTimeDetailsDTO;
-import com.test.nmt.model.showTime.TimeZoneDTO;
 import com.test.nmt.service.movie.MovieService;
 import com.test.nmt.service.room.RoomService;
 import com.test.nmt.service.showTime.ShowTimeService;
-import com.test.nmt.service.showTime.TimeService;
 
 @Service
 public class ScheduleRequestServiceImp implements ScheduleRequestService {
@@ -24,8 +22,6 @@ public class ScheduleRequestServiceImp implements ScheduleRequestService {
     private RoomService roomService;
     @Autowired
     private ShowTimeService showTimeService;
-    @Autowired
-    private TimeService timeZoneService;
 
     public ShowTimeDetailsDTO getShowTimeDetails(Long id) {
         ShowTimeDetailsDTO dto = new ShowTimeDetailsDTO();
@@ -37,10 +33,6 @@ public class ScheduleRequestServiceImp implements ScheduleRequestService {
         dto.setRoomName(roomDTO.getRoomName());
         dto.setLocation(roomDTO.getLocation());
         dto.setNumberSit(roomDTO.getNumberSit());
-        TimeZoneDTO timeZoneDTO = timeZoneService.getByID(showTimeDTO.getTimeZoneID());
-        dto.setStartTime(timeZoneDTO.getStartTime());
-        dto.setEndTime(timeZoneDTO.getEndTime());
-        dto.setTimeZoneID(timeZoneDTO.getTimeZoneID());
         return dto;
     }
 

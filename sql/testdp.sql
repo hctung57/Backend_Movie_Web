@@ -28,7 +28,7 @@ CREATE TABLE `movies` (
   `description` varchar(1000) DEFAULT NULL,
   `movie_name` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`movieid`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -37,7 +37,7 @@ CREATE TABLE `movies` (
 
 LOCK TABLES `movies` WRITE;
 /*!40000 ALTER TABLE `movies` DISABLE KEYS */;
-INSERT INTO `movies` VALUES (1,'https://khenphim.com/wp-content/uploads/2022/05/Doctor-Strange-madness-1-poster_KP.webp','Sau các sự kiện của Avengers: Endgame, Tiến sĩ Stephen Strange tiếp tục nghiên cứu về Viên đá Thời gian. Nhưng một người bạn cũ đã trở thành kẻ thù tìm cách tiêu diệt mọi phù thủy trên Trái đất, làm xáo trộn kế hoạch của Strange và cũng khiến anh ta mở ra một tội ác khôn lường.','PHÙ THỦY TỐI THƯỢNG TRONG ĐA VŨ TRỤ HỖN LOẠN'),(2,'https://m.media-amazon.com/images/M/MV5BZDQyODUwM2MtNzA0YS00ZjdmLTgzMjItZWRjN2YyYWE5ZTNjXkEyXkFqcGdeQXVyMTI2MzY1MjM1._V1_.jpg','Minions: Sự trỗi dậy của Gru là một bộ phim hoạt hình máy tính hài của Mỹ năm 2022 do Illumination sản xuất và được phân phối bởi Universal Pictures. Đây là phần tiếp theo của phần phim ngoại truyện Minions và là phần thứ năm nói chung trong loạt phim Kẻ trộm mặt trăng.','Minions: Sự trỗi dậy của Gru'),(3,'http://starlight.vn/Areas/Admin/Content/Fileuploads/images/POSTER/cu-lao-xac-song.jpg','Phim nói về hành trình của một nhóm người cùng nhau sinh tồn và cố gắng thoát khỏi sự truy đuổi của xác sống để đến chuyến phà cuối cùng tại một cù lao trên vùng hạ lưu sông Mekong khi đại dịch xác sống bùng nổ. Công - một thầy thuốc đông y nhưng đã mất đi niềm tin vào tình người, quyết định đưa cha mình và con gái tìm đường rời đi. Trong quá trình chạy trốn, họ thất lạc nhau, Công hoang mang đi tìm đứa con gái rồi vô tình gặp được một gia đình hiền lành, hai chàng trai ma lanh, đôi bạn trẻ lương thiện và một người đàn ông có trái tim dũng cảm. Họ cùng nhau hợp sức thành một nhóm chống trả để giành giật sự sống. Đúng lúc này, sự tị hiềm, tham lam, ích kỷ của lòng người nảy sinh và lại đẩy họ vào những thử thách sống còn. Liệu hành trình của nhóm người này sẽ đi về đâu khi đại dịch càng ngày càng lan rộng?','CÙ LAO XÁC SỐNG');
+INSERT INTO `movies` VALUES (1,'https://khenphim.com/wp-content/uploads/2022/05/Doctor-Strange-madness-1-poster_KP.webp','Sau các sự kiện của Avengers: Endgame, Tiến sĩ Stephen Strange tiếp tục nghiên cứu về Viên đá Thời gian. Nhưng một người bạn cũ đã trở thành kẻ thù tìm cách tiêu diệt mọi phù thủy trên Trái đất, làm xáo trộn kế hoạch của Strange và cũng khiến anh ta mở ra một tội ác khôn lường.','PHÙ THỦY TỐI THƯỢNG TRONG ĐA VŨ TRỤ HỖN LOẠN'),(2,'https://m.media-amazon.com/images/M/MV5BZDQyODUwM2MtNzA0YS00ZjdmLTgzMjItZWRjN2YyYWE5ZTNjXkEyXkFqcGdeQXVyMTI2MzY1MjM1._V1_.jpg','Minions: Sự trỗi dậy của Gru là một bộ phim hoạt hình máy tính hài của Mỹ năm 2022 do Illumination sản xuất và được phân phối bởi Universal Pictures. Đây là phần tiếp theo của phần phim ngoại truyện Minions và là phần thứ năm nói chung trong loạt phim Kẻ trộm mặt trăng.','Minions: Sự trỗi dậy của Gru'),(3,'http://starlight.vn/Areas/Admin/Content/Fileuploads/images/POSTER/cu-lao-xac-song.jpg','Phim nói về hành trình của một nhóm người cùng nhau sinh tồn và cố gắng thoát khỏi sự truy đuổi của xác sống để đến chuyến phà cuối cùng tại một cù lao trên vùng hạ lưu sông Mekong khi đại dịch xác sống bùng nổ. Công - một thầy thuốc đông y nhưng đã mất đi niềm tin vào tình người, quyết định đưa cha mình và con gái tìm đường rời đi. Trong quá trình chạy trốn, họ thất lạc nhau, Công hoang mang đi tìm đứa con gái rồi vô tình gặp được một gia đình hiền lành, hai chàng trai ma lanh, đôi bạn trẻ lương thiện và một người đàn ông có trái tim dũng cảm. Họ cùng nhau hợp sức thành một nhóm chống trả để giành giật sự sống. Đúng lúc này, sự tị hiềm, tham lam, ích kỷ của lòng người nảy sinh và lại đẩy họ vào những thử thách sống còn. Liệu hành trình của nhóm người này sẽ đi về đâu khi đại dịch càng ngày càng lan rộng?','CÙ LAO XÁC SỐNG'),(6,'https://upload.wikimedia.org/wikipedia/vi/b/b3/Poster_gioi_thieu_phim_Em_va_Trinh.jpg','Em và Trịnh là một bộ phim điện ảnh Việt Nam do Phan Gia Nhật Linh đạo diễn, kể về cuộc đời của cố nhạc sĩ Trịnh Công Sơn.','Em và Trịnh');
 /*!40000 ALTER TABLE `movies` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -105,8 +105,9 @@ CREATE TABLE `showtime` (
   `roomid` bigint DEFAULT NULL,
   `show_date` date DEFAULT NULL,
   `start_time` time DEFAULT NULL,
+  `end_time` time DEFAULT NULL,
   PRIMARY KEY (`show_timeid`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -115,7 +116,7 @@ CREATE TABLE `showtime` (
 
 LOCK TABLES `showtime` WRITE;
 /*!40000 ALTER TABLE `showtime` DISABLE KEYS */;
-INSERT INTO `showtime` VALUES (1,1,1,1,'2022-07-05','22:30:00');
+INSERT INTO `showtime` VALUES (1,1,1,1,'2022-07-05','22:30:00','01:00:00'),(2,1,0,1,'2022-07-05','09:00:00','11:30:00'),(3,1,0,2,'2022-07-05','11:30:00','14:00:00');
 /*!40000 ALTER TABLE `showtime` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -131,7 +132,7 @@ CREATE TABLE `tickets` (
   `show_timeid` bigint DEFAULT NULL,
   `userid` bigint DEFAULT NULL,
   PRIMARY KEY (`ticketid`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -140,7 +141,7 @@ CREATE TABLE `tickets` (
 
 LOCK TABLES `tickets` WRITE;
 /*!40000 ALTER TABLE `tickets` DISABLE KEYS */;
-INSERT INTO `tickets` VALUES (1,1,1);
+INSERT INTO `tickets` VALUES (1,1,1),(2,1,2),(3,1,1);
 /*!40000 ALTER TABLE `tickets` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -167,7 +168,7 @@ CREATE TABLE `user_roles` (
 
 LOCK TABLES `user_roles` WRITE;
 /*!40000 ALTER TABLE `user_roles` DISABLE KEYS */;
-INSERT INTO `user_roles` VALUES (1,1);
+INSERT INTO `user_roles` VALUES (1,1),(2,3);
 /*!40000 ALTER TABLE `user_roles` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -186,7 +187,7 @@ CREATE TABLE `users` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `UKr43af9ap4edm43mmtq01oddj6` (`username`),
   UNIQUE KEY `UK6dotkott2kjsp8vw4d0m25fb7` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -195,7 +196,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'a@gmail.com','$2a$10$cBBmW0f6aNnafxYJJKCcgu3ikFaYR5eUNjqe6IL8nIprLTho4E0.y','hctungg');
+INSERT INTO `users` VALUES (1,'a@gmail.com','$2a$10$cBBmW0f6aNnafxYJJKCcgu3ikFaYR5eUNjqe6IL8nIprLTho4E0.y','hctungg'),(2,'admin@admin.com','$2a$10$eoqz6/iX5w4wMm0qrgVV2eI5qkwoVgx6Pvm1ac9518P0ErdwoSbqG','admin');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -208,4 +209,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-09-15  0:22:02
+-- Dump completed on 2022-09-16  0:11:29

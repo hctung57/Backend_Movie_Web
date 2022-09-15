@@ -19,6 +19,7 @@ public class ShowTimeDTO {
     private Long numTicketSold;
     private Date showDate;
     private Time startTime;
+    private Time endTime;
 
     public ShowTimeDTO loadFromEntity(ShowTimeEntity entity) {
         this.showTimeID = entity.getShowTimeID();
@@ -26,6 +27,8 @@ public class ShowTimeDTO {
         this.roomID = entity.getRoomID();
         this.numTicketSold = entity.getNumTicketSold();
         this.showDate = entity.getShowDate();
+        this.startTime = entity.getStartTime();
+        this.endTime = entity.getEndTime();
         return this;
     }
 }

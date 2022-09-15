@@ -37,4 +37,16 @@ public class ShowtimeServiceImp implements ShowTimeService {
     public void createShowTime(ShowTimeDTO showTimeDTO) {
         showTimeRepository.save(new ShowTimeEntity().loadFromDTO(showTimeDTO));
     }
+
+    @Override
+    public void deleteShowTimeByID(Long id) {
+        showTimeRepository.deleteById(id);
+    }
+
+    @Override
+    public void deleteAllShowTimeByMovieID(Long id) {
+        List<ShowTimeEntity> ids = showTimeRepository.findAll().stream()
+                .filter(show -> show.getMovieID().equals(id)).collect(Collectors.toList());
+        ids.stream().forEach(showid -> showTimeRepository.delete(showid));
+    }
 }

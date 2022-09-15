@@ -22,12 +22,15 @@ public class OderTicketRequestServiceImp implements OderTicketRequestService {
     private ScheduleRequestService scheduleRequestService;
 
     @Override
-    public TicketDetailDTO getTicketDetailByTicketID(Long id) {
-        TicketDTO ticketDTO = ticketService.getByTicketID(id);
+    public TicketDetailDTO getTicketDetailByUser_TicketID(Long user, Long ticket) {
+        TicketDTO ticketDTO = ticketService.getByTicketID(ticket);
         TicketDetailDTO dto = new TicketDetailDTO();
-        dto.setShowTimeDTO(Arrays.asList(scheduleRequestService.getDataByShowTimeID(ticketDTO.getShowTimeID())));
-        dto.setUserDTO(userService.getByID(ticketDTO.getUserID()));
-        dto.setTicketID(id);
+
+        if (ticketDTO.getUserID() == user) {
+            dto.setShowTimeDTO(Arrays.asList(scheduleRequestService.getDataByShowTimeID(ticketDTO.getShowTimeID())));
+            dto.setUserDTO(userService.getByID(ticketDTO.getUserID()));
+            dto.setTicketID(ticket);
+        }
         return dto;
     }
 

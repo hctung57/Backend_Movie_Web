@@ -13,4 +13,6 @@ public interface MovieService {
     public List<MovieDTO> findAll();
 
     public void createMovie(MovieDTO movieDTO);
+
+    public void deleteMovieByID(Long id);
 }

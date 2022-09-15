@@ -29,6 +29,8 @@ public class ScheduleRequestServiceImp implements ScheduleRequestService {
         dto.setNumTicketSold(showTimeDTO.getNumTicketSold());
         dto.setShowDate(showTimeDTO.getShowDate());
         dto.setShowTimeID(id);
+        dto.setStartTime(showTimeDTO.getStartTime());
+        dto.setEndTime(showTimeDTO.getEndTime());
         RoomDTO roomDTO = roomService.getById(showTimeDTO.getRoomID());
         dto.setRoomName(roomDTO.getRoomName());
         dto.setLocation(roomDTO.getLocation());

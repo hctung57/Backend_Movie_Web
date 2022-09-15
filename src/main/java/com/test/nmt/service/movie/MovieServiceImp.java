@@ -32,4 +32,9 @@ public class MovieServiceImp implements MovieService {
     public void createMovie(MovieDTO movieDTO) {
         movieRepository.save(new MoviesEntity().loadFromDTO(movieDTO));
     }
+
+    @Override
+    public void deleteMovieByID(Long id) {
+        movieRepository.deleteById(id);
+    }
 }

@@ -3,7 +3,9 @@ package com.test.nmt.api.movie;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.test.nmt.model.movie.MovieDTO;
@@ -30,9 +32,22 @@ public class MovieController {
         return movieService.findById(id);
     }
 
-    @PostMapping
+    @PreAuthorize("hasRole('ADMIN')")
+    @PostMapping("/create")
     public void createMovie(@RequestBody MovieDTO movieDTO) {
         movieService.createMovie(movieDTO);
+    }
+
+    @PreAuthorize("hasRole('ADMIN')")
+    @PostMapping("/update")
+    public void updateMovie(@RequestBody MovieDTO movieDTO) {
+        movieService.createMovie(movieDTO);
+    }
+
+    @PostMapping("/delete")
+    @PreAuthorize("hasRole('ADMIN')")
+    public void deleteMovie(@RequestParam(name = "id") Long id) {
+        movieService.deleteMovieByID(id);
     }
 
 }

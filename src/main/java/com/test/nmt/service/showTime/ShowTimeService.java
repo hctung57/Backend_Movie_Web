@@ -15,4 +15,9 @@ public interface ShowTimeService {
     public void increaseTicketSold(Long id);
 
     public void createShowTime(ShowTimeDTO showTimeDTO);
+
+    public void deleteShowTimeByID(Long id);
+
+    public void deleteAllShowTimeByMovieID(Long id);
+
 }

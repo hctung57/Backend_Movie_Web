@@ -10,7 +10,7 @@ import com.test.nmt.model.user.UserDTO;
 import com.test.nmt.service.user.UserService;
 
 @RestController
-@RequestMapping("/api/user")
+@RequestMapping("/api/")
 public class UserController {
     @Autowired
     private UserService userService;
